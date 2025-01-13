@@ -1,4 +1,4 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8" />
@@ -9,14 +9,20 @@
   <style>
     .hidden { display: none; }
 
-    /* 4人を横並びにするため、4列のGridを設定 */
+    /* デフォルト: 1カラム（モバイル） */
     .talent-section {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: 1fr;
       gap: 20px;
       justify-items: center;
       margin: 0 auto;
-      max-width: 1300px; /* お好みで調整してね */
+      max-width: 1200px;
+    }
+    /* 768px以上の画面幅で3カラム */
+    @media (min-width: 768px) {
+      .talent-section {
+        grid-template-columns: repeat(3, 1fr);
+      }
     }
 
     .talent-card {
@@ -185,7 +191,8 @@
   <main>
     <!-- タレント一覧 -->
     <section class="talent-section">
-      <!-- 1人目 -->
+      
+      <!-- カラム1・行1：やしろじゅり。 -->
       <div class="talent-card">
         <img src="S__5611753.jpg" alt="やしろじゅり。" class="talent-photo">
         <h2>やしろじゅり。</h2>
@@ -197,11 +204,15 @@
           <a href="https://twitter.com/yashirojuri_" target="_blank">X(旧Twitter)</a> | 
           <a href="https://instagram.com/yashirojuri_" target="_blank">Instagram</a>
         </p>
-        <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSe0EQ3yDJiN6sOsHQqtXrPR-m1CB1MjXgLUJcQPTc8ITgXBrw/viewform')">予約【前期】</button>
-        <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSecA-fTxUgZm5EtNpExGEyS5srkarz5yGV7WPV_w6_yVkx5JA/viewform?usp=header')">予約【後期】</button>
+        <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSe0EQ3yDJiN6sOsHQqtXrPR-m1CB1MjXgLUJcQPTc8ITgXBrw/viewform')">
+          予約【前期】
+        </button>
+        <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSecA-fTxUgZm5EtNpExGEyS5srkarz5yGV7WPV_w6_yVkx5JA/viewform?usp=header')">
+          予約【後期】
+        </button>
       </div>
 
-      <!-- 2人目 -->
+      <!-- カラム2・行1：鮎川まりな -->
       <div class="talent-card">
         <img src="S__6078497_0.jpg" alt="鮎川まりな" class="talent-photo">
         <h2>鮎川まりな</h2>
@@ -213,39 +224,53 @@
           <a href="https://twitter.com/marina_osakana" target="_blank">X(旧Twitter)</a> | 
           <a href="https://instagram.com/marina_osakana" target="_blank">Instagram</a>
         </p>
-        <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSdErvx31BrBpgq6sHeGnV93CYPlUVUSEWmfQQlPn5hHFpHrwQ/viewform')">予約【前期】</button>
-        <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSfmCu87g5uNcS_6ta0zZGS3yvc5CLSSe-1zclzkEEfdmVLsiQ/viewform?usp=header')">予約【後期】</button>
+        <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSdErvx31BrBpgq6sHeGnV93CYPlUVUSEWmfQQlPn5hHFpHrwQ/viewform')">
+          予約【前期】
+        </button>
+        <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSfmCu87g5uNcS_6ta0zZGS3yvc5CLSSe-1zclzkEEfdmVLsiQ/viewform?usp=header')">
+          予約【後期】
+        </button>
       </div>
 
-      <!-- 3人目 -->
+      <!-- カラム3・行1：アン・バティカ -->
       <div class="talent-card">
         <img src="S__138461191.jpg" alt="アン・バティカ" class="talent-photo">
         <h2>アン・バティカ</h2>
         <p>身長: 157cm / 3サイズ:Bcup-57-82</p>
         <p>出身: 愛知県</p>
-        <p>好きなこと: ：読書、映画鑑賞</p>
+        <p>好きなこと: 読書、映画鑑賞</p>
         <p>ポイント: 八重歯、アニメ声</p>
         <p>
           <a href="https://twitter.com/an_batica" target="_blank">X(旧Twitter)</a> | 
           <a href="https://instagram.com/an_batica" target="_blank">Instagram</a>
         </p>
-        <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSeeTHBpYCN2DVuqEpXuFsnl7fpe-g1JUi58sJDpbukPLihjdw/viewform?usp=dialog')">予約【前期】</button>
-        <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSe_MXirOxS1xgkvlqC8so7FUjjqC9yOFZJOLUcq_jRaUL_kYQ/viewform?usp=dialog')">予約【後期】</button>
+        <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSeeTHBpYCN2DVuqEpXuFsnl7fpe-g1JUi58sJDpbukPLihjdw/viewform?usp=dialog')">
+          予約【前期】
+        </button>
+        <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSe_MXirOxS1xgkvlqC8so7FUjjqC9yOFZJOLUcq_jRaUL_kYQ/viewform?usp=dialog')">
+          予約【後期】
+        </button>
       </div>
 
-      <!-- 4人目 -->
-      <div class="talent-card">
-        <img src="S__6078495_0.jpg" alt="4人目サンプル" class="talent-photo">
+      <!-- カラム1・行2（同じ1列目に表示）：さてち -->
+      <div class="talent-card" style="grid-column: 1;">
+        <img src="S__6078495_0.jpg" alt="さてち" class="talent-photo">
         <h2>さてち</h2>
         <p>身長: 162cm / Jカップ♡</p>
         <p>出身: 東京都</p>
-        <p>好きなこと: 料理  歌うこと</p>
+        <p>好きなこと: 料理、歌うこと</p>
         <p>ポイント: おめめと愛嬌</p>
         <p>
-          <a href="https://x.com/satechicos?s=21&t=aKcT_NdMFnfw7tGNIPjh3A" target="_blank">X(旧Twitter)</a> 
+          <a href="https://x.com/satechicos?s=21&t=aKcT_NdMFnfw7tGNIPjh3A" target="_blank">
+            X(旧Twitter)
+          </a>
         </p>
-        <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSfyFl-rlMoXqWbC3khkfjjD6MUL6CuGUe71a6GhpShoZs-zOw/viewform?usp=header')">予約【前期】</button>
-        <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSeptmwXRicfpXvxSWwTYKzCm3DwD5fVczy8pUFMxgVo7K4-uQ/viewform?usp=header')">予約【後期】</button>
+        <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSfyFl-rlMoXqWbC3khkfjjD6MUL6CuGUe71a6GhpShoZs-zOw/viewform?usp=header')">
+          予約【前期】
+        </button>
+        <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSeptmwXRicfpXvxSWwTYKzCm3DwD5fVczy8pUFMxgVo7K4-uQ/viewform?usp=header')">
+          予約【後期】
+        </button>
       </div>
 
     </section>
@@ -329,17 +354,17 @@
     <!-- お問い合わせ欄 -->
     <section class="contact-section">
       <h2>お問い合わせはこちら</h2>
-      <p>ご質問やご不明な点がございましたら、お気軽にお問い合わせください。<br>
-         メールにてご連絡承ります。</p>
-
+      <p>
+        ご質問やご不明な点がございましたら、お気軽にお問い合わせください。<br>
+        メールにてご連絡承ります。
+      </p>
       <p>
         ▶︎ メール: 
-        <a class="contact-link" href="mailto:osikatsu.photosession.com">
+        <a class="contact-link" href="mailto:osikatsu.photosession@gmail.com">
           osikatsu.photosession@gmail.com
         </a>
       </p>
     </section>
-
   </main>
 
   <footer>
