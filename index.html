@@ -8,13 +8,23 @@
   
   <style>
     .hidden { display: none; }
-    .talent-section { display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; }
+
+    /* 4人を横並びにするため、4列のGridを設定 */
+    .talent-section {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      justify-items: center;
+      margin: 0 auto;
+      max-width: 1300px; /* お好みで調整してね */
+    }
+
     .talent-card {
       background: #fff8fa;
       border: 2px solid #ffdce5;
       border-radius: 10px;
       padding: 20px;
-      width: 250px;
+      width: 250px; /* カードの幅 */
       text-align: center;
     }
     .talent-card p {
@@ -133,6 +143,34 @@
     .twitter-link a:hover {
       background: #0d8ae3;
     }
+
+    /* お問い合わせセクション */
+    .contact-section {
+      margin: 40px auto;
+      max-width: 600px;
+      background: #fff8fa;
+      border: 2px solid #ffdce5;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    }
+    .contact-section h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #d97b94;
+    }
+    .contact-section p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+    }
+    .contact-link {
+      color: #d97b94;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    .contact-link:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -147,6 +185,7 @@
   <main>
     <!-- タレント一覧 -->
     <section class="talent-section">
+      <!-- 1人目 -->
       <div class="talent-card">
         <img src="S__5611753.jpg" alt="やしろじゅり。" class="talent-photo">
         <h2>やしろじゅり。</h2>
@@ -158,13 +197,13 @@
           <a href="https://twitter.com/yashirojuri_" target="_blank">X(旧Twitter)</a> | 
           <a href="https://instagram.com/yashirojuri_" target="_blank">Instagram</a>
         </p>
-        <!-- 予約ボタンを2つに変更 -->
         <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSe0EQ3yDJiN6sOsHQqtXrPR-m1CB1MjXgLUJcQPTc8ITgXBrw/viewform')">予約【前期】</button>
         <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSecA-fTxUgZm5EtNpExGEyS5srkarz5yGV7WPV_w6_yVkx5JA/viewform?usp=header')">予約【後期】</button>
       </div>
 
+      <!-- 2人目 -->
       <div class="talent-card">
-        <img src="S__5611664.jpg" alt="鮎川まりな" class="talent-photo">
+        <img src="S__6078497_0.jpg" alt="鮎川まりな" class="talent-photo">
         <h2>鮎川まりな</h2>
         <p>身長: 168cm / 3サイズ: 92-62-97</p>
         <p>出身: 群馬県</p>
@@ -174,12 +213,11 @@
           <a href="https://twitter.com/marina_osakana" target="_blank">X(旧Twitter)</a> | 
           <a href="https://instagram.com/marina_osakana" target="_blank">Instagram</a>
         </p>
-        <!-- 予約ボタンを2つに変更 -->
         <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSdErvx31BrBpgq6sHeGnV93CYPlUVUSEWmfQQlPn5hHFpHrwQ/viewform')">予約【前期】</button>
         <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSfmCu87g5uNcS_6ta0zZGS3yvc5CLSSe-1zclzkEEfdmVLsiQ/viewform?usp=header')">予約【後期】</button>
       </div>
 
-      <!-- 新しく追加したいプロフィール -->
+      <!-- 3人目 -->
       <div class="talent-card">
         <img src="S__138461191.jpg" alt="アン・バティカ" class="talent-photo">
         <h2>アン・バティカ</h2>
@@ -191,10 +229,25 @@
           <a href="https://twitter.com/an_batica" target="_blank">X(旧Twitter)</a> | 
           <a href="https://instagram.com/an_batica" target="_blank">Instagram</a>
         </p>
-        <!-- 予約ボタンを2つに変更 -->
         <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSeeTHBpYCN2DVuqEpXuFsnl7fpe-g1JUi58sJDpbukPLihjdw/viewform?usp=dialog')">予約【前期】</button>
         <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSe_MXirOxS1xgkvlqC8so7FUjjqC9yOFZJOLUcq_jRaUL_kYQ/viewform?usp=dialog')">予約【後期】</button>
       </div>
+
+      <!-- 4人目 -->
+      <div class="talent-card">
+        <img src="S__6078495_0.jpg" alt="4人目サンプル" class="talent-photo">
+        <h2>さてち</h2>
+        <p>身長: 162cm / Jカップ♡</p>
+        <p>出身: 東京都</p>
+        <p>好きなこと: 料理  歌うこと</p>
+        <p>ポイント: おめめと愛嬌</p>
+        <p>
+          <a href="https://x.com/satechicos?s=21&t=aKcT_NdMFnfw7tGNIPjh3A" target="_blank">X(旧Twitter)</a> 
+        </p>
+        <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSfyFl-rlMoXqWbC3khkfjjD6MUL6CuGUe71a6GhpShoZs-zOw/viewform?usp=header')">予約【前期】</button>
+        <button onclick="showGoogleForm('https://docs.google.com/forms/d/e/1FAIpQLSeptmwXRicfpXvxSWwTYKzCm3DwD5fVczy8pUFMxgVo7K4-uQ/viewform?usp=header')">予約【後期】</button>
+      </div>
+
     </section>
 
     <!-- 利用規約ボタンと利用規約 -->
@@ -271,6 +324,20 @@
         marginwidth="0">
         読み込んでいます…
       </iframe>
+    </section>
+
+    <!-- お問い合わせ欄 -->
+    <section class="contact-section">
+      <h2>お問い合わせはこちら</h2>
+      <p>ご質問やご不明な点がございましたら、お気軽にお問い合わせください。<br>
+         メールにてご連絡承ります。</p>
+
+      <p>
+        ▶︎ メール: 
+        <a class="contact-link" href="mailto:osikatsu.photosession.com">
+          osikatsu.photosession@gmail.com
+        </a>
+      </p>
     </section>
 
   </main>
